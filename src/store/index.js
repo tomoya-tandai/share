@@ -4,7 +4,7 @@ import createPersistedState from "vuex-persistedstate";
 import axios from "axios";
 import router from "../router/index";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   plugins: [createPersistedState()],
@@ -29,7 +29,7 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, { email, password }) {
       let responseLogin = await axios.post(
-        "https://arcane-forest-16767.herokuapp.com//api/login",
+        "https://arcane-forest-16767.herokuapp.com/api/login",
         {
           email: email,
           password: password,
